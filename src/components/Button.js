@@ -1,12 +1,10 @@
 import PropTypes from 'prop-types';
 
-function Button({ buttonName, buttonClass }) {
-  return (
-    <button type="button" className={buttonClass}>
-      { buttonName }
-    </button>
-  );
-}
+const Button = ({ buttonName, buttonClass }) => (
+  <button type="button" className={buttonClass}>
+    { buttonName }
+  </button>
+);
 
 Button.propTypes = {
   buttonName: PropTypes.string,

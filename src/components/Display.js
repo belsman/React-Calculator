@@ -1,12 +1,10 @@
 import PropTypes from 'prop-types';
 
-function Display({ result }) {
-  return (
-    <div id="display">
-      <div className="user-input">{ result || 0 }</div>
-    </div>
-  );
-}
+const Display = ({ result }) => (
+  <div id="display">
+    <div className="user-input">{ result }</div>
+  </div>
+);
 
 Display.propTypes = {
   result: PropTypes.string,
