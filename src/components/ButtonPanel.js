@@ -26,6 +26,11 @@ const ButtonPanel = () => (
       <Button buttonName="3" />
       <Button buttonName="+" buttonClass="basic-operator" />
     </div>
+    <div className="btn-panel-row">
+      <Button buttonName="0" buttonClass="flex-basis-50" />
+      <Button buttonName="." buttonClass="flex-basis-25" />
+      <Button buttonName="=" buttonClass="basic-operator flex-basis-25" />
+    </div>
   </div>
 );
 
