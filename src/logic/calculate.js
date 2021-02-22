@@ -1,9 +1,6 @@
 const calculate = (calcData, buttonName) => {
-  const { total, next, operation } = calcData;
-  if (buttonName === "+/-") {
-    total *= -1;
-    next *= -1;
-  }
+  calcData.x = 1;
+  return calcData;
 };
 
 export default calculate;
