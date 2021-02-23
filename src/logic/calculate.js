@@ -3,7 +3,7 @@ import operate from './operate';
 const calculate = (calcData, buttonName) => {
   const operationList = ['+', 'x', '-', '÷'];
   let { total, next, operator } = calcData;
-  
+
   total = total || '';
 
   if (!operator && !next) {
