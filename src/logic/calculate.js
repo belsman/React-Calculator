@@ -18,7 +18,7 @@ const calculate = (calcData, buttonName) => {
     }
 
     if (buttonName === '+/-') {
-      total = operate(total, 1, '-');
+      total = operate(total, 1, 'x');
     }
 
     if (buttonName === '%') {
@@ -42,7 +42,7 @@ const calculate = (calcData, buttonName) => {
     }
 
     if (buttonName === '+/-') {
-      next = operate(next, 1, '-');
+      next = operate(next, 1, 'x');
     }
 
     if (buttonName === '%') {
@@ -52,14 +52,14 @@ const calculate = (calcData, buttonName) => {
 
   if (total && operator && next) {
     total = operate(total, next, operator);
-    next = '';
-    operator = '';
+    next = null;
+    operator = null;
   }
 
   if (buttonName === 'AC') {
-    total = '0';
-    next = 0;
-    operator = 0;
+    total = '';
+    next = null;
+    operator = null;
   }
 
   return { total, next, operator };

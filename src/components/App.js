@@ -11,6 +11,7 @@ class App extends React.Component {
       next: null,
       operation: null,
     };
+    this.handleClick = this.handleClick.bind(this);
   }
 
   handleClick(buttonName) {
@@ -24,6 +25,7 @@ class App extends React.Component {
 
   render() {
     const { total } = this.state;
+    console.log(this.state);
     return (
       <>
         <div className="container">
