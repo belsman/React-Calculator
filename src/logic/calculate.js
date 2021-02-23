@@ -1,7 +1,7 @@
-import operate from "./operate";
+import operate from './operate';
 
 const calculate = (calcData, buttonName) => {
-  const operationList = ["+", "-", "x", "÷"];
+  const operationList = ['+', '-', 'x', '÷'];
   let { total, next, operator } = calcData;
 
   if (!operator && !next) {
@@ -9,18 +9,18 @@ const calculate = (calcData, buttonName) => {
       total += buttonName;
     }
 
-    if (buttonName === ".") {
+    if (buttonName === '.') {
       if (total.indexOf(buttonName) === -1) {
         total += buttonName;
       }
     }
 
-    if (buttonName === "+/-") {
-      total = operate(total, 1, "-");
+    if (buttonName === '+/-') {
+      total = operate(total, 1, '-');
     }
 
-    if (buttonName === "%") {
-      total = operate(total, 0.01, "x");
+    if (buttonName === '%') {
+      total = operate(total, 0.01, 'x');
     }
   }
 
@@ -33,29 +33,29 @@ const calculate = (calcData, buttonName) => {
       next += buttonName;
     }
 
-    if (buttonName === ".") {
+    if (buttonName === '.') {
       if (next.indexOf(buttonName) === -1) {
         next += buttonName;
       }
     }
 
-    if (buttonName === "+/-") {
-      next = operate(next, 1, "-");
+    if (buttonName === '+/-') {
+      next = operate(next, 1, '-');
     }
 
-    if (buttonName === "%") {
-       next = operate(next, 0.01, "x");
+    if (buttonName === '%') {
+      next = operate(next, 0.01, 'x');
     }
   }
 
   if (total && operator && next) {
-    result = operate(total, next, operator);
+    total = operate(total, next, operator);
     next = null;
     operator = null;
   }
 
-  if (buttonName === "AC") {
-    result = "0";
+  if (buttonName === 'AC') {
+    total = '0';
     next = null;
     operator = null;
   }
