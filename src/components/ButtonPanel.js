@@ -1,7 +1,7 @@
+import React from 'react';
 import Button from './Button';
 
 class ButtonPanel extends React.Component {
-
   constructor(props) {
     super(props);
   }
@@ -16,7 +16,7 @@ class ButtonPanel extends React.Component {
         <div className="btn-panel-row">
           <Button buttonName="AC" buttonClass="basic-operator" clickHandler={this.handleClick} />
           <Button buttonName="+/-" buttonClass="basic-operator" clickHandler={this.handleClick} />
-          <Button buttonName="%" buttonClass="basic-operator"  clickHandler={this.handleClick} />
+          <Button buttonName="%" buttonClass="basic-operator" clickHandler={this.handleClick} />
           <Button buttonName="÷" buttonClass="basic-operator" clickHandler={this.handleClick} />
         </div>
         <div className="btn-panel-row">

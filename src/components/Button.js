@@ -1,3 +1,4 @@
+import React from 'react';
 import PropTypes from 'prop-types';
 
 class Button extends React.Component {
@@ -17,7 +18,6 @@ class Button extends React.Component {
     );
   }
 }
-
 
 Button.propTypes = {
   buttonName: PropTypes.string,
