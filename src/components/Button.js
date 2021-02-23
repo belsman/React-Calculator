@@ -1,10 +1,23 @@
 import PropTypes from 'prop-types';
 
-const Button = ({ buttonName, buttonClass }) => (
-  <button type="button" className={buttonClass}>
-    { buttonName }
-  </button>
-);
+class Button extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  handleClick(buttonName) {
+    return this.props.clickHandler(buttonName);
+  }
+
+  render() {
+    return (
+      <button type="button" onClick={this.handleClick} className={buttonClass}>
+        { buttonName }
+      </button>
+    );
+  }
+}
+
 
 Button.propTypes = {
   buttonName: PropTypes.string,

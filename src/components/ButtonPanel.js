@@ -47,6 +47,4 @@ class ButtonPanel extends React.Component {
   }
 }
 
-const ButtonPanel = () => 
-
 export default ButtonPanel;
