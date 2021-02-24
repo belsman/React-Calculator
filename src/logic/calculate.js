@@ -1,16 +1,10 @@
 import operate from './operate';
 
 const calculate = (calcData, buttonName) => {
-<<<<<<< HEAD
   const operationList = ['+', '-', 'x', '÷'];
   let { total, next, operator } = calcData;
-=======
-  const operationList = ['+', 'x', '-', '÷'];
-  let { total, next, operation } = calcData;
-  total = total || '';
->>>>>>> fifth-milestone
 
-  if (!operation && !next) {
+  if (!operator && !next) {
     if (/\d/.test(buttonName)) {
       total += buttonName;
     }
@@ -22,11 +16,7 @@ const calculate = (calcData, buttonName) => {
     }
 
     if (buttonName === '+/-') {
-<<<<<<< HEAD
       total = operate(total, 1, '-');
-=======
-      total = operate(total, -1, 'x');
->>>>>>> fifth-milestone
     }
 
     if (buttonName === '%') {
@@ -35,11 +25,10 @@ const calculate = (calcData, buttonName) => {
   }
 
   if (operationList.includes(buttonName)) {
-    operation = buttonName;
+    operator = buttonName;
   }
 
-  if (total && operation) {
-    next = next || '';
+  if (total && operator) {
     if (/\d/.test(buttonName)) {
       next += buttonName;
     }
@@ -51,11 +40,7 @@ const calculate = (calcData, buttonName) => {
     }
 
     if (buttonName === '+/-') {
-<<<<<<< HEAD
       next = operate(next, 1, '-');
-=======
-      next = operate(next, -1, 'x');
->>>>>>> fifth-milestone
     }
 
     if (buttonName === '%') {
@@ -63,7 +48,6 @@ const calculate = (calcData, buttonName) => {
     }
   }
 
-<<<<<<< HEAD
   if (total && operator && next) {
     total = operate(total, next, operator);
     next = null;
@@ -74,21 +58,9 @@ const calculate = (calcData, buttonName) => {
     total = '0';
     next = null;
     operator = null;
-=======
-  if (buttonName === '=' && total && operation && next) {
-    total = operate(total, next, operation);
-    next = null;
-    operation = null;
   }
 
-  if (buttonName === 'AC') {
-    total = '';
-    next = null;
-    operation = null;
->>>>>>> fifth-milestone
-  }
-
-  return { total, next, operation };
+  return { total, next, operator };
 };
 
 export default calculate;

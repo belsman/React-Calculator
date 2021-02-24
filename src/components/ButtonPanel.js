@@ -1,46 +1,37 @@
-import PropTypes from 'prop-types';
 import Button from './Button';
 
-const ButtonPanel = props => {
-  const { clickHandler } = props;
-
-  return (
-    <div id="btn-panel">
-      <div className="btn-panel-row">
-        <Button buttonName="AC" buttonClass="basic-operator" clickHandler={clickHandler} />
-        <Button buttonName="+/-" buttonClass="basic-operator" clickHandler={clickHandler} />
-        <Button buttonName="%" buttonClass="basic-operator" clickHandler={clickHandler} />
-        <Button buttonName="÷" buttonClass="basic-operator" clickHandler={clickHandler} />
-      </div>
-      <div className="btn-panel-row">
-        <Button buttonName="7" clickHandler={clickHandler} />
-        <Button buttonName="8" clickHandler={clickHandler} />
-        <Button buttonName="9" clickHandler={clickHandler} />
-        <Button buttonName="x" buttonClass="basic-operator" clickHandler={clickHandler} />
-      </div>
-      <div className="btn-panel-row">
-        <Button buttonName="4" clickHandler={clickHandler} />
-        <Button buttonName="5" clickHandler={clickHandler} />
-        <Button buttonName="6" clickHandler={clickHandler} />
-        <Button buttonName="-" buttonClass="basic-operator" clickHandler={clickHandler} />
-      </div>
-      <div className="btn-panel-row">
-        <Button buttonName="1" clickHandler={clickHandler} />
-        <Button buttonName="2" clickHandler={clickHandler} />
-        <Button buttonName="3" clickHandler={clickHandler} />
-        <Button buttonName="+" buttonClass="basic-operator" clickHandler={clickHandler} />
-      </div>
-      <div className="btn-panel-row">
-        <Button buttonName="0" buttonClass="flex-basis-50" clickHandler={clickHandler} />
-        <Button buttonName="." buttonClass="flex-basis-25" clickHandler={clickHandler} />
-        <Button buttonName="=" buttonClass="basic-operator flex-basis-25" clickHandler={clickHandler} />
-      </div>
+const ButtonPanel = () => (
+  <div id="btn-panel">
+    <div className="btn-panel-row">
+      <Button buttonName="AC" buttonClass="basic-operator" />
+      <Button buttonName="+/-" buttonClass="basic-operator" />
+      <Button buttonName="%" buttonClass="basic-operator" />
+      <Button buttonName="÷" buttonClass="basic-operator" />
     </div>
-  );
-};
-
-ButtonPanel.propTypes = {
-  clickHandler: PropTypes.func.isRequired,
-};
+    <div className="btn-panel-row">
+      <Button buttonName="7" />
+      <Button buttonName="8" />
+      <Button buttonName="9" />
+      <Button buttonName="x" buttonClass="basic-operator" />
+    </div>
+    <div className="btn-panel-row">
+      <Button buttonName="4" />
+      <Button buttonName="5" />
+      <Button buttonName="6" />
+      <Button buttonName="-" buttonClass="basic-operator" />
+    </div>
+    <div className="btn-panel-row">
+      <Button buttonName="1" />
+      <Button buttonName="2" />
+      <Button buttonName="3" />
+      <Button buttonName="+" buttonClass="basic-operator" />
+    </div>
+    <div className="btn-panel-row">
+      <Button buttonName="0" buttonClass="flex-basis-50" />
+      <Button buttonName="." buttonClass="flex-basis-25" />
+      <Button buttonName="=" buttonClass="basic-operator flex-basis-25" />
+    </div>
+  </div>
+);
 
 export default ButtonPanel;
