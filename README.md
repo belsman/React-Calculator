@@ -7,7 +7,7 @@ In this project, a calculator is built using the React.js library.
 
 ## This web app is live, you can check it here: 
 
-[Live demo](https://math-magician-calc.herokuapp.com/)
+[Live demo](https://math-react-calx.herokuapp.com/)
 
 
 ## Built With
