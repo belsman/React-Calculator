@@ -1,7 +1,7 @@
 import operate from './operate';
 
 const calculate = (calcData, buttonName) => {
-  const operationList = ['+', 'x', '-', '÷'];
+  const operationList = ['+', 'x', '-', '÷', '/'];
   let { total, next, operation } = calcData;
   total = total || '';
 
