@@ -24,7 +24,10 @@ class App extends React.Component {
   }
 
   render() {
-    const { total, next } = this.state;
+    const { next } = this.state;
+    let { total } = this.state;
+    total = total || '0';
+
     return (
       <>
         <div className="container">

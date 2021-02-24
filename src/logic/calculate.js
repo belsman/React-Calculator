@@ -17,7 +17,7 @@ const calculate = (calcData, buttonName) => {
     }
 
     if (buttonName === '+/-') {
-      total = operate(total, 1, 'x');
+      total = operate(total, -1, 'x');
     }
 
     if (buttonName === '%') {
@@ -42,7 +42,7 @@ const calculate = (calcData, buttonName) => {
     }
 
     if (buttonName === '+/-') {
-      next = operate(next, 1, 'x');
+      next = operate(next, -1, 'x');
     }
 
     if (buttonName === '%') {
