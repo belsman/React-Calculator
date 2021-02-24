@@ -57,7 +57,7 @@ const calculate = (calcData, buttonName) => {
   }
 
   if (buttonName === 'AC') {
-    total = '';
+    total = null;
     next = null;
     operation = null;
   }
