@@ -24,12 +24,11 @@ class App extends React.Component {
   }
 
   render() {
-    const { total } = this.state;
-    console.log(this.state);
+    const { total, next } = this.state;
     return (
       <>
         <div className="container">
-          <Display result={total} />
+          <Display result={next || total} />
           <ButtonPanel clickHandler={this.handleClick} />
         </div>
       </>

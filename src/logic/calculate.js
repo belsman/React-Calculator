@@ -2,11 +2,10 @@ import operate from './operate';
 
 const calculate = (calcData, buttonName) => {
   const operationList = ['+', 'x', '-', '÷'];
-  let { total, next, operator } = calcData;
-
+  let { total, next, operation } = calcData;
   total = total || '';
 
-  if (!operator && !next) {
+  if (!operation && !next) {
     if (/\d/.test(buttonName)) {
       total += buttonName;
     }
@@ -27,10 +26,11 @@ const calculate = (calcData, buttonName) => {
   }
 
   if (operationList.includes(buttonName)) {
-    operator = buttonName;
+    operation = buttonName;
   }
 
-  if (total && operator) {
+  if (total && operation) {
+    next = next || '';
     if (/\d/.test(buttonName)) {
       next += buttonName;
     }
@@ -50,19 +50,19 @@ const calculate = (calcData, buttonName) => {
     }
   }
 
-  if (total && operator && next) {
-    total = operate(total, next, operator);
+  if (buttonName === '=' && total && operation && next) {
+    total = operate(total, next, operation);
     next = null;
-    operator = null;
+    operation = null;
   }
 
   if (buttonName === 'AC') {
     total = '';
     next = null;
-    operator = null;
+    operation = null;
   }
 
-  return { total, next, operator };
+  return { total, next, operation };
 };
 
 export default calculate;
