@@ -19,7 +19,7 @@ const operate = (numberOne, numberTwo, operation) => {
       result = NaN;
     }
   } catch (e) {
-    result = null;
+    result = '';
   }
 
   return result.toString();
