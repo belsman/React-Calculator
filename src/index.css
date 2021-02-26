@@ -5,17 +5,18 @@ body {
 
 .container {
   margin: auto;
-  width: 50%;
+  width: 700px;
 }
 
 #display {
   display: flex;
   flex-direction: column-reverse;
-  background-color: #e8e8e8;
-  border: 1px solid #333;
-  height: 80px;
+  background-color: #333;
+  border: 1px solid #f9f9f9;
+  height: 100px;
   font-size: 2rem;
   text-align: right;
+  color: #fff;
 }
 
 .btn-panel-row {
