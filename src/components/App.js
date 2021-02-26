@@ -21,7 +21,7 @@ const App = () => {
 
   return (
     <>
-      <div className="container">
+      <div className="calculator">
         <Display result={next || total} />
         <ButtonPanel clickHandler={handleClick} />
       </div>

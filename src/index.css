@@ -3,7 +3,38 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.container {
+header,
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 600;
+}
+
+header {
+  border: 1px dotted purple;
+  padding: 0 5px;
+}
+
+nav li {
+  list-style-type: none;
+  margin-right: 10px;
+  text-shadow: 1px 1px rgb(133, 32, 133);
+  font-size: 1.2rem;
+  padding: 4px;
+  border: 1px dotted rgb(133, 32, 133);
+  cursor: pointer;
+}
+
+.content {
+  padding: 10px;
+}
+
+.quotes {
+  color: red;
+}
+
+.calculator {
   margin: auto;
   width: 700px;
 }
