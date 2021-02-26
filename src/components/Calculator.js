@@ -1,11 +1,13 @@
 import React from 'react';
-import Core from './Core';
+import App from './App';
 
-export default () => {
+const Calculator = () => (
   <div className="content">
     <div>
       <p>Let&apos;s do some math!</p>
     </div>
-    <Core />
-  </div>;
-};
+    <App />
+  </div>
+);
+
+export default Calculator;
