@@ -1,15 +1,11 @@
 import React from 'react';
-import Header from './Header';
-import App from './App';
+import Core from './Core';
 
 export default () => {
-  <>
-    <Header />
-    <div className="content">
-      <div>
-        <p>Let&apos;s do some math!</p>
-      </div>
-      <App />
+  <div className="content">
+    <div>
+      <p>Let&apos;s do some math!</p>
     </div>
-  </>;
+    <Core />
+  </div>;
 };
