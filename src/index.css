@@ -26,8 +26,13 @@ nav li {
   cursor: pointer;
 }
 
+a {
+  text-decoration: none;
+}
+
 .content {
   padding: 10px;
+  font-size: 1.3rem;
 }
 
 .quotes {
