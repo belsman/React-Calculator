@@ -2,9 +2,20 @@ import React from 'react';
 import App from './App';
 
 const Calculator = () => (
-  <div className="content">
+  <div
+    className="content"
+    style={{
+      display: 'flex',
+      justifyContent: 'space-between',
+    }}
+  >
     <div>
-      <p>Let&apos;s do some math!</p>
+      <p style={{
+        fontSize: '1.2em',
+      }}
+      >
+        Let&apos;s do some math!
+      </p>
     </div>
     <App />
   </div>
