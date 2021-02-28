@@ -3,19 +3,55 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.container {
-  margin: auto;
-  width: 50%;
+header,
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 600;
+}
+
+header {
+  border: 1px dotted purple;
+  padding: 0 5px;
+}
+
+nav li {
+  list-style-type: none;
+  margin-right: 10px;
+  text-shadow: 1px 1px rgb(133, 32, 133);
+  font-size: 1.2rem;
+  padding: 4px;
+  border: 1px dotted rgb(133, 32, 133);
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+.content {
+  padding: 10px;
+  font-size: 1.3rem;
+}
+
+.quotes {
+  color: red;
+}
+
+.calculator {
+  width: 700px;
 }
 
 #display {
   display: flex;
   flex-direction: column-reverse;
-  background-color: #e8e8e8;
-  border: 1px solid #333;
-  height: 80px;
+  background-color: #333;
+  border: 1px solid #f9f9f9;
+  height: 100px;
   font-size: 2rem;
   text-align: right;
+  color: #fff;
 }
 
 .btn-panel-row {
