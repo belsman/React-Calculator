@@ -33,4 +33,23 @@ describe('Test calculate() method', () => {
     const operate = calculate(calcData, '=');
     expect(operate.total).toBe('0');
   });
+
+  test('properties of calcData becomes null if buttonName is AC', () => {
+    const calcData = { total: '99', next: '99', operation: 'x' };
+    const operate = calculate(calcData, 'AC');
+    expect(operate.total).toBeNull();
+  });
+
+  test('total returns a percentage of total if buttonName is %', () => {
+    const calcData = { total: '99', next: null, operation: null };
+    const operate = calculate(calcData, '%');
+    expect(operate.total).toBe('0.99');
+  });
+
+  test('negative next returns a positive value if buttonName is +/-', () => {
+    const calcData = { total: '99', next: '-6', operation: '-' };
+    const operate = calculate(calcData, '+/-');
+    expect(operate.next).toBe('6');
+  });
+
 });
