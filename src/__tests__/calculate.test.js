@@ -51,5 +51,4 @@ describe('Test calculate() method', () => {
     const operate = calculate(calcData, '+/-');
     expect(operate.next).toBe('6');
   });
-
 });
