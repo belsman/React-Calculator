@@ -11,12 +11,6 @@ describe('Calculator component test', () => {
     expect(text).toBeInTheDocument();
   });
 
-  test("should renders 'Let's do some math!' text", () => {
-    render(<Calculator />);
-    const node = screen.getByRole('calculator');
-    expect(node).toBeInTheDocument();
-  });
-
   test('should render the expected output', () => {
     const component = renderer.create(
       <Calculator />,
