@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Quote component test should render the expected output 1`] = `
+<div
+  className="content"
+>
+  <p
+    className="quotes"
+    style={
+      Object {
+        "fontSize": "1.3rem",
+        "left": "50%",
+        "position": "absolute",
+        "textAlign": "center",
+        "top": "50%",
+        "transform": "translate(-50%, -50%)",
+      }
+    }
+  >
+    Mathematics is about numbers, equations, computations, or algorithms: it is about understanding. -- William Paul Thurston
+  </p>
+</div>
+`;
